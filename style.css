@@ -7,8 +7,10 @@
     --text-color: #333;
     --bg-light: #f4f4f4;
     --font-family: 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
-
+    --dark-color: #343a40; /* এই লাইনটা যোগ করা হয়েছে */
 }
+
+/* ... বাকি সব CSS কোড আগের মতোই থাকবে ... */
 
 * {
     margin: 0;

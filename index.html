@@ -13,31 +13,28 @@
 <body>
 
     <header>
-<header>
-    <nav class="navbar">
-        <a href="#home" class="logo-link">
-            <div class="logo">
-                <img src="logo.png" alt="Jonaki Ideal School Logo">
+        <nav class="navbar">
+            <a href="#home" class="logo-link">
+                <div class="logo">
+                    <img src="logo.png" alt="Jonaki Ideal School Logo">
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">হোম</a></li>
+                <li><a href="#about">আমাদের সম্পর্কে</a></li>
+                <li><a href="#teachers">শিক্ষকবৃন্দ</a></li>
+                <li><a href="authority.html">কর্তৃপক্ষ</a></li>
+                <li><a href="#facilities">সুবিধা</a></li>
+                <li><a href="#admission" class="admission-btn">এডমিশন</a></li>
+                <li><a href="#contact">যোগাযোগ</a></li>
+                <li><a href="#">আরো</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
-        </a>
-        <ul class="nav-links">
-            <li><a href="#home">হোম</a></li>
-            <li><a href="#about">আমাদের সম্পর্কে</a></li>
-            <li><a href="#teachers">শিক্ষকবৃন্দ</a></li>  <!-- এই নতুন লাইনটি যোগ করুন -->
-            <li><a href="authority.html">কর্তৃপক্ষ</a></li>
-            <li><a href="#facilities">সুবিধা</a></li>
-            <li><a href="#admission" class="admission-btn">এডমিশন</a></li>
-            <li><a href="#contact">যোগাযোগ</a></li>
-            <li><a href="#">আরো</a></li>
-            
-        </ul>
-        <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-    </nav>
-</header>
+        </nav>
     </header>
 
     <main>
@@ -56,126 +53,125 @@
         </section>
 
         <section id="notice" class="section-padding bg-light">
-    <div class="container">
-        <h2>নোটিশ বোর্ড</h2>
-        <div id="notice-container">
-            <!-- সব নোটিসগুলো এখানে JavaScript দিয়ে ঢুকিয়ে দেওয়া হবে -->
-        </div>
-    </div>
+            <div class="container">
+                <h2>নোটিশ বোর্ড</h2>
+                <div id="notice-container">
+                    <!-- সব নোটিসগুলো এখানে JavaScript দিয়ে ঢুকিয়ে দেওয়া হবে -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Teachers Section -->
+        <section id="teachers" class="section-padding">
+            <div class="container">
+                <h2>আমাদের শিক্ষকবৃন্দ</h2>
+
+                <!-- Principal Section -->
+                <div class="teacher-group">
+                    <h3>প্রধান শিক্ষক</h3>
+                    <div class="teacher-grid">
+                        <div class="teacher-card">
+                            <img src="principal_karim.jpg" alt="আব্দুস সাত্তার">
+                            <h4>আব্দুস সাত্তার</h4>
+                            <p>প্রধান শিক্ষক</p>
+                            <p class="teacher-phone">📞 01303-255164</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Assistant Principal Section -->
+                <div class="teacher-group">
+                    <h3>সহকারী প্রধান শিক্ষক</h3>
+                    <div class="teacher-grid">
+                        <div class="teacher-card">
+                            <img src="rahim_uddin.jpg" alt="মোঃ জাকির হোসেন">
+                            <h4>মোঃ জাকির হোসেন</h4>
+                            <p>সহকারী প্রধান শিক্ষক</p>
+                            <p class="teacher-phone">📞 01303-255164</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Teachers Section -->
+                <div class="teacher-group">
+                    <h3>সম্মানিত শিক্ষকবৃন্দ</h3>
+                    <div class="teacher-grid">
+                        <div class="teacher-card">
+                            <img src="selina_akhtar.jpg" alt="হাসিনা আক্তার পারভীন">
+                            <h4>হাসিনা আক্তার পারভীন</h4>
+                            <p>সিনিয়র শিক্ষিকা, বাংলা</p>
+                            <p class="teacher-phone">📞 01303-255164</p>
+                        </div>
+                        <div class="teacher-card">
+                            <img src="./teacher/sumon.jpg" alt="মোঃ মঞ্জুরুল ইসলাম সুমন">
+                            <h4>মোঃ মঞ্জুরুল ইসলাম সুমন</h4>
+                            <p>সিনিয়র শিক্ষক, তথ্য ও যোগাযোগ প্রযুক্তি </p>
+                            <p class="teacher-phone">📞 01303-255164</p>
+                        </div>
+                        <div class="teacher-card">
+                            <img src="fahima_yasmin.jpg" alt="ফাহিমা ইয়াসমিন">
+                            <h4>ফাহিমা ইয়াসমিন</h4>
+                            <p>সহকারী শিক্ষিকা, ইংরেজি</p>
+                            <p class="teacher-phone">📞 01303-255164</p>
+                        </div>
+                        <div class="teacher-card">
+                            <img src="anisur_rahman.jpg" alt="আনিসুর রহমান">
+                            <h4>আনিসুর রহমান</h4>
+                            <p>প্রভাষক, পদার্থবিজ্ঞান</p>
+                            <p class="teacher-phone">📞 01303-255164</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section-padding bg-light">
+            <div class="container">
+                <h2>আমাদের গ্যালারি</h2>
+                <div class="gallery-grid">
+                    <!-- গ্যালারির ছবি ১ -->
+                    <div class="gallery-item">
+                        <a href="images/gallery1.jpg" target="_blank">
+                            <img src="images/gallery1.jpg" alt="বার্ষিক ক্রীড়া প্রতিযোগিতা">
+                        </a>
+                    </div>
+                    <!-- গ্যালারির ছবি ২ -->
+                    <div class="gallery-item">
+                        <a href="images/gallery2.jpg" target="_blank">
+                            <img src="images/gallery2.jpg" alt="সাংস্কৃতিক অনুষ্ঠান">
+                        </a>
+                    </div>
+                    <!-- গ্যালারির ছবি ৩ -->
+                    <div class="gallery-item">
+                        <a href="images/gallery3.jpg" target="_blank">
+                            <img src="images/gallery3.jpg" alt="পুরস্কার বিতরণী">
+                        </a>
+                    </div>
+                    <!-- গ্যালারির ছবি ৪ -->
+                    <div class="gallery-item">
+                        <a href="images/gallery4.jpg" target="_blank">
+                            <img src="images/gallery4.jpg" alt="বিতর্ক প্রতিযোগিতা">
+                        </a>
+                    </div>
+                    <!-- গ্যালারির ছবি ৫ -->
+                    <div class="gallery-item">
+                        <a href="images/gallery5.jpg" target="_blank">
+                            <img src="images/gallery5.jpg" alt="শিক্ষা সফর">
+                        </a>
+                    </div>
+                    <!-- গ্যালারির ছবি ৬ -->
+                    <div class="gallery-item">
+                        <a href="images/gallery6.jpg" target="_blank">
+                            <img src="images/gallery6.jpg" alt="বিজ্ঞান মেলা">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-<!-- Teachers Section -->
-<section id="teachers" class="section-padding">
-    <div class="container">
-        <h2>আমাদের শিক্ষকবৃন্দ</h2>
 
-        <!-- Principal Section -->
-        <div class="teacher-group">
-            <h3>প্রধান শিক্ষক</h3>
-            <div class="teacher-grid">
-                <div class="teacher-card">
-                    <img src="principal_karim.jpg" alt="আব্দুস সাত্তার">
-                    <h4>আব্দুস সাত্তার</h4>
-                    <p>প্রধান শিক্ষক</p>
-                    <p class="teacher-phone">📞 01303-255164</p> <!-- ফোন নম্বর যোগ হয়েছে -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Assistant Principal Section -->
-        <div class="teacher-group">
-            <h3>সহকারী প্রধান শিক্ষক</h3>
-            <div class="teacher-grid">
-                <div class="teacher-card">
-                    <img src="rahim_uddin.jpg" alt="মোঃ জাকির হোসেন">
-                    <h4>মোঃ জাকির হোসেন</h4>
-                    <p>সহকারী প্রধান শিক্ষক</p>
-                    <p class="teacher-phone">📞 01303-255164</p> <!-- ফোন নম্বর যোগ হয়েছে -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Other Teachers Section -->
-        <div class="teacher-group">
-            <h3>সম্মানিত শিক্ষকবৃন্দ</h3>
-            <div class="teacher-grid">
-                <div class="teacher-card">
-                    <img src="selina_akhtar.jpg" alt="হাসিনা আক্তার পারভীন">
-                    <h4>হাসিনা আক্তার পারভীন</h4>
-                    <p>সিনিয়র শিক্ষিকা, বাংলা</p>
-                    <p class="teacher-phone">📞 01303-255164</p> <!-- ফোন নম্বর যোগ হয়েছে -->
-                </div>
-                <div class="teacher-card">
-                    <img src="./teacher/sumon.jpg" alt="মোঃ মঞ্জুরুল ইসলাম সুমন">
-                    <h4>মোঃ মঞ্জুরুল ইসলাম সুমন</h4>
-                    <p>সিনিয়র শিক্ষক, তথ্য ও যোগাযোগ প্রযুক্তি </p>
-                    <p class="teacher-phone">📞 01303-255164</p> <!-- ফোন নম্বর যোগ হয়েছে -->
-                </div>
-                <div class="teacher-card">
-                    <img src="fahima_yasmin.jpg" alt="ফাহিমা ইয়াসমিন">
-                    <h4>ফাহিমা ইয়াসমিন</h4>
-                    <p>সহকারী শিক্ষিকা, ইংরেজি</p>
-                    <p class="teacher-phone">📞 01303-255164</p> <!-- ফোন নম্বর যোগ হয়েছে -->
-                </div>
-                <div class="teacher-card">
-                    <img src="anisur_rahman.jpg" alt="আনিসুর রহমান">
-                    <h4>আনিসুর রহমান</h4>
-                    <p>প্রভাষক, পদার্থবিজ্ঞান</p>
-                    <p class="teacher-phone">📞 01303-255164</p> <!-- ফোন নম্বর যোগ হয়েছে -->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    </div>
-</section>
-<!-- Gallery Section -->
-<section id="gallery" class="section-padding bg-light">
-    <div class="container">
-        <h2>আমাদের গ্যালারি</h2>
-        <div class="gallery-grid">
-            <!-- গ্যালারির ছবি ১ -->
-            <div class="gallery-item">
-                <a href="images/gallery1.jpg" target="_blank">
-                    <img src="images/gallery1.jpg" alt="বার্ষিক ক্রীড়া প্রতিযোগিতা">
-                </a>
-            </div>
-            <!-- গ্যালারির ছবি ২ -->
-            <div class="gallery-item">
-                <a href="images/gallery2.jpg" target="_blank">
-                    <img src="images/gallery2.jpg" alt="সাংস্কৃতিক অনুষ্ঠান">
-                </a>
-            </div>
-            <!-- গ্যালারির ছবি ৩ -->
-            <div class="gallery-item">
-                <a href="images/gallery3.jpg" target="_blank">
-                    <img src="images/gallery3.jpg" alt="পুরস্কার বিতরণী">
-                </a>
-            </div>
-            <!-- গ্যালারির ছবি ৪ -->
-            <div class="gallery-item">
-                <a href="images/gallery4.jpg" target="_blank">
-                    <img src="images/gallery4.jpg" alt="বিতর্ক প্রতিযোগিতা">
-                </a>
-            </div>
-            <!-- গ্যালারির ছবি ৫ -->
-            <div class="gallery-item">
-                <a href="images/gallery5.jpg" target="_blank">
-                    <img src="images/gallery5.jpg" alt="শিক্ষা সফর">
-                </a>
-            </div>
-            <!-- গ্যালারির ছবি ৬ -->
-            <div class="gallery-item">
-                <a href="images/gallery6.jpg" target="_blank">
-                    <img src="images/gallery6.jpg" alt="বিজ্ঞান মেলা">
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<button id="topBtn" title="উপরে যান">↑</button>
+    <button id="topBtn" title="উপরে যান">↑</button>
 
     <footer>
         <p>&copy; ২০২৫ জোনাকী আইডিয়াল স্কুল | সর্বস্বত্ব সংরক্ষিত</p>

@@ -48,31 +48,41 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
 
-    // --- স্মুথ স্ক্রোলিং এর জন্য কোড (এই অংশটি খুবই গুরুত্বপূর্ণ) ---
+    // --- স্মুথ স্ক্রোলিং এর জন্য কোড ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault(); // লিংকের ডিফল্ট আচরণ (হঠাৎ করে ওপরে যাওয়া) বন্ধ করে
+            e.preventDefault();
             
-            const targetId = this.getAttribute('href'); // যেমন: "#teachers"
-            const targetElement = document.querySelector(targetId); // সেই আইডি যুক্ত এলিমেন্টটা খুঁজে বের করে
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                // এলিমেন্টটাকে সুন্দরভাবে স্ক্রোল করে নিয়ে যায়
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
-                    block: 'start' // এলিমেন্টটার উপরের অংশ স্ক্রিনের উপরে চলে আসবে
+                    block: 'start'
                 });
             }
         });
     });
 
-            const topBtn = document.getElementById('topBtn');
-        window.onscroll = () => {
-        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200)
+    // --- "উপরে যান" বাটনের জন্য কোড ---
+    const topBtn = document.getElementById('topBtn');
+
+    // স্ক্রোল ইভেন্ট লিসেনার যোগ করা হচ্ছে
+    window.addEventListener('scroll', () => {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
             topBtn.style.display = "block";
-        else
+        } else {
             topBtn.style.display = "none";
-        };
-        topBtn.onclick = () => window.scrollTo({top:0, behavior:'smooth'});
+        }
+    });
+
+    // বাটনে ক্লিক ইভেন্ট লিসেনার যোগ করা হচ্ছে
+    topBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 
 });
