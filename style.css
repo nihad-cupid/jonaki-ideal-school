@@ -1,0 +1,333 @@
+/* style.css */
+
+/* CSS Variables for easy theming */
+:root {
+    --primary-color: #001f3f; /* Navy Blue */
+    --secondary-color: #ffdd57; /* Yellow */
+    --text-color: #333;
+    --bg-light: #f4f4f4;
+    --font-family: 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #ffffff;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+/* Header & Navbar */
+header {
+    background-color: var(--primary-color);
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff; /* একটা সাদা বর্ডার যোগ হলো */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* একটা হালকা ছায়াও যোগ করা যেতে পারে */
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Banner Section */
+.banner {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('banner.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 1.5em;
+}
+
+/* Notice Card */
+.notice-card {
+    background: #fff;
+    padding: 20px;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px; /* এই লাইনটা যোগ করুন দুটি নোটিশের মধ্যে ফাঁকা জায়গা রাখার জন্য */
+}
+
+.notice-card:last-child {
+    margin-bottom: 0; /* শেষের নোটিশের নিচে অতিরিক্ত ফাঁকা জায়গা থাকবে না */
+}
+
+.notice-card h3 {
+    color: var(--primary-color);
+}
+/* Teachers Section Styles */
+
+.teacher-group {
+    margin-bottom: 50px; /* প্রতিটা গ্রুপের মধ্যে ফাঁকা জায়গা */
+}
+
+.teacher-group:last-child {
+    margin-bottom: 0; /* শেষ গ্রুপের নিচে অতিরিক্ত জায়গা থাকবে না */
+}
+
+.teacher-group h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block; /* শুধু লেখার নিচে লাইন আসার জন্য */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* কার্ডগুলোর মধ্যে ফাঁকা জায়গা */
+}
+
+.teacher-card {
+    background: #fff;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teacher-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.teacher-card img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* একটা সুন্দর ছায়া */
+}
+
+.teacher-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--dark-color);
+}
+
+.teacher-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0;
+}
+/* Teacher Phone Number Style */
+.teacher-card .teacher-phone {
+    font-size: 0.9rem;       /* ফোন নম্বরের ফন্ট সাইজ একটু ছোট */
+    color: #555;             /* রং একটু ফ্যাকাসে */
+    margin-top: 5px;         /* উপরের লাইন থেকে একটু দূরত্ব */
+    font-weight: 500;        /* ফন্ট একটু মোটা */
+}
+/* Gallery Section Styles */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px; /* ছবিগুলোর মধ্যে ফাঁকা জায়গা */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden; /* ছবি জুম করার সময় বাইরে বের হয়ে যাবে না */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px); /* হোভার করলে গোটা বক্সটা একটু উপরে উঠবে */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px; /* সব ছবির উচ্চতা সমান রাখার জন্য */
+    object-fit: cover; /* ছবি বিকৃত না হয়ে বক্স ভরে ফেলবে */
+    display: block;
+    transition: transform 0.4s ease; /* ছবি জুম হওয়ার সময় স্মুথনেস */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* হোভার করলে ছবি ১০% বড় হবে */
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 0;
+}
+/* Authority Section Styles (New Card Design) */
+
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; /* কার্ডগুলোর মধ্যে ফাঁকা জায়গা */
+    margin-top: 30px;
+}
+
+.committee-card {
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    border-left: 5px solid var(--primary-color); /* বাম পাশে একটা রঙিন বর্ডার */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.committee-card:hover {
+    transform: translateY(-8px); /* হোভার করলে কার্ডটা উপরে উঠবে */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.committee-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.committee-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .banner h1 {
+        font-size: 2.5em;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
