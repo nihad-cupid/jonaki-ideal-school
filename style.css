@@ -288,6 +288,22 @@ footer {
     font-weight: 500;
 }
 
+#topBtn{
+  position: fixed;
+  bottom: 30px; right: 30px;
+  z-index: 1000;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 45px; height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  transition: .3s;
+}
+#topBtn:hover{ background: var(--secondary-color); color: #000; }
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
@@ -330,4 +346,17 @@ footer {
     h2 {
         font-size: 2rem;
     }
+}
+/* ---- Admission Highlight ---- */
+a.admission-btn{
+  background: var(--secondary-color); /* হলুদ */
+  color: #000 !important;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: .3s;
+}
+a.admission-btn:hover{
+  background: #ffc107;
+  box-shadow: 0 0 8px rgba(255,221,87,.6);
 }
