@@ -362,3 +362,47 @@ a.admission-btn:hover{
   background: #ffc107;
   box-shadow: 0 0 8px rgba(255,221,87,.6);
 }
+/* Founder Section Styles (Tag Style - Modified) */
+
+#founder {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    text-align: center;
+    position: relative; /* অবশ্যই দরকার */
+    padding-top: 50px; /* ট্যাগের জায়গা বানানোর জন্য */
+}
+
+.founder-box {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px 30px; /* উপরের padding বাড়িয়ে দিতে হবে */
+    background-color: #ffffff;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    position: relative; /* বক্সের ভিতরের ট্যাগকে পজিশন করার জন্য */
+}
+
+.founder-title {
+    position: absolute; /* ট্যাগকে বক্সের সাপেক্ষে উপরে নিয়ে যাবে */
+    top: -18px; /* বক্সের উপর থেকে ১৮px উপরে */
+    left: 50%;
+    transform: translateX(-50%); /* হরাইজন্টালি মাঝখানে নিয়ে আসার জন্য */
+    
+    background-color: #ffffff; /* বক্সের মতোই সাদা ব্যাকগ্রাউন্ড */
+    color: var(--primary-color); /* ফন্টের কালার প্রাইমারি কালার */
+    padding: 5px 25px; /* ট্যাগের ভিতরে ফাঁকা জায়গা */
+    border-radius: 20px; /* ট্যাগকে গোল করার জন্য */
+    font-size: 1rem;
+    font-weight: 700; /* ফন্ট একটু মোটা করা হলো */
+    letter-spacing: 1px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* হালকা ছায়া */
+}
+
+.founder-name {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+}
