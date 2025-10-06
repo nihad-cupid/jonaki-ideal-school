@@ -313,6 +313,29 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', handleKeyboardNavigation);
     document.getElementById('lightbox').addEventListener('click', handleLightboxClick);
 
+    // --- Results Tabs Functionality ---
+    function initResultsTabs() {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and panes
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+                
+                // Add active class to current button and pane
+                button.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    }
+
+    // Initialize results tabs
+    initResultsTabs();
+
 });
 
 // --- Additional Utility Functions ---

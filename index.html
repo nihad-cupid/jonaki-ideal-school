@@ -20,15 +20,19 @@
             </div>
         </a>
         <ul class="nav-links">
-            <li><a href="#home">হোম</a></li>
-            <li><a href="#about">আমাদের সম্পর্কে</a></li>
-            <li><a href="#teachers">শিক্ষকবৃন্দ</a></li>
-            <li><a href="authority.html">কর্তৃপক্ষ</a></li>
-            <li><a href="#facilities">সুবিধা</a></li>
-            <li><a href="#admission-process" class="admission-btn">এডমিশন</a></li>
-            <li><a href="#contact">যোগাযোগ</a></li>
-            <li><a href="#">আরো</a></li>
-        </ul>
+    <li><a href="#home">হোম</a></li>
+    <li><a href="#about">আমাদের সম্পর্কে</a></li>
+    <li><a href="#teachers">শিক্ষকবৃন্দ</a></li>
+    <li><a href="#facilities">সুবিধা</a></li>
+    <li><a href="authority.html">কর্তৃপক্ষ</a></li>
+    <li><a href="#results">একাডেমিক রেজাল্ট</a></li> <!-- নতুন মেনু -->
+    <li><a href="#admission-process" class="admission-btn">এডমিশন</a></li>
+    <li><a href="#contact">যোগাযোগ</a></li>
+    <li>
+        <a href="#">আরো</a>
+        <!-- ড্রপডাউন মেনু (যদি প্রয়োজন হয়) -->
+    </li>
+</ul>
         <div class="hamburger">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -303,55 +307,292 @@
         </div>
     </section>
 
+    
 
-       <!-- Gallery Section -->
-<section id="gallery" class="section-padding bg-light">
+    <!-- Academic Results Section (এখানে যোগ করুন) -->
+    <section id="results" class="section-padding">
+        <div class="container">
+            <h2>একাডেমিক রেজাল্ট</h2>
+            <p class="section-subtitle">গর্বের সাথে আমাদের শিক্ষার্থীদের অর্জন</p>
+            
+            <div class="results-overview">
+                <div class="result-stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">পাসের হার</div>
+                </div>
+                <div class="result-stat">
+                    <div class="stat-number">85%</div>
+                    <div class="stat-label">GPA 5</div>
+                </div>
+                <div class="result-stat">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">A+ গ্রেড</div>
+                </div>
+            </div>
+
+            <div class="results-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="psc">PSC</button>
+                    <button class="tab-button" data-tab="jsc">JSC</button>
+                    <button class="tab-button" data-tab="ssc">SSC</button>
+                </div>
+                
+                <div class="tab-content">
+                    <!-- PSC Results -->
+                    <div class="tab-pane active" id="psc">
+                        <div class="result-card">
+                            <h4>PSC Exam 2024</h4>
+                            <div class="result-details">
+                                <div class="result-item">
+                                    <span class="result-label">মোট পরীক্ষার্থী:</span>
+                                    <span class="result-value">১৫০ জন</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">পাসের হার:</span>
+                                    <span class="result-value">১০০%</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">GPA 5:</span>
+                                    <span class="result-value">১৩০ জন (৮৬.৬৭%)</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">A+ গ্রেড:</span>
+                                    <span class="result-value">১৪৫ জন (৯৬.৬৭%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- JSC Results -->
+                    <div class="tab-pane" id="jsc">
+                        <div class="result-card">
+                            <h4>JSC Exam 2024</h4>
+                            <div class="result-details">
+                                <div class="result-item">
+                                    <span class="result-label">মোট পরীক্ষার্থী:</span>
+                                    <span class="result-value">১২০ জন</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">পাসের হার:</span>
+                                    <span class="result-value">১০০%</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">GPA 5:</span>
+                                    <span class="result-value">৯৫ জন (৭৯.১৭%)</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">A+ গ্রেড:</span>
+                                    <span class="result-value">১১০ জন (৯১.৬৭%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- SSC Results -->
+                    <div class="tab-pane" id="ssc">
+                        <div class="result-card">
+                            <h4>SSC Exam 2024</h4>
+                            <div class="result-details">
+                                <div class="result-item">
+                                    <span class="result-label">মোট পরীক্ষার্থী:</span>
+                                    <span class="result-value">১০০ জন</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">পাসের হার:</span>
+                                    <span class="result-value">১০০%</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">GPA 5:</span>
+                                    <span class="result-value">৮০ জন (৮০%)</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">A+ গ্রেড:</span>
+                                    <span class="result-value">৯০ জন (৯০%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Achievers -->
+            <div class="top-achievers">
+                <h3>Top Achievers</h3>
+                <div class="achievers-grid">
+                    <div class="achiever-card">
+                        <div class="achiever-rank">১ম</div>
+                        <h4>আয়েশা সিদ্দিকা</h4>
+                        <p>SSC 2024</p>
+                        <div class="achiever-gpa">GPA 5.00</div>
+                    </div>
+                    <div class="achiever-card">
+                        <div class="achiever-rank">২য়</div>
+                        <h4>রাফি আহমেদ</h4>
+                        <p>SSC 2024</p>
+                        <div class="achiever-gpa">GPA 5.00</div>
+                    </div>
+                    <div class="achiever-card">
+                        <div class="achiever-rank">৩য়</div>
+                        <h4>তানিয়া ইসলাম</h4>
+                        <p>SSC 2024</p>
+                        <div class="achiever-gpa">GPA 5.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Events Calendar Section -->
+<section id="events" class="section-padding bg-light">
     <div class="container">
-        <h2>আমাদের গ্যালারি</h2>
-        <div class="gallery-grid">
-            <!-- গ্যালারির ছবি ১ -->
-            <div class="gallery-item">
-                <img src="images/gallery1.jpg" alt="বার্ষিক ক্রীড়া প্রতিযোগিতা" onclick="openLightbox(this)">
-                <div class="gallery-caption">বার্ষিক ক্রীড়া প্রতিযোগিতা</div>
+        <h2>আগামী ইভেন্টস</h2>
+        <p class="section-subtitle">স্কুলের গুরুত্বপূর্ণ তারিখ ও অনুষ্ঠানসমূহ</p>
+        
+        <div class="calendar-container">
+            <!-- Month Navigation -->
+            <div class="month-navigation">
+    <button class="events-nav-btn prev-month">←</button>
+    <h3 class="current-month">ডিসেম্বর ২০২৪</h3>
+    <button class="events-nav-btn next-month">→</button>
+</div>
+
+            <!-- Events Grid -->
+            <div class="events-grid">
+                <!-- Event 1 -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <div class="date-day">২০</div>
+                        <div class="date-month">ডিসেম্বর</div>
+                    </div>
+                    <div class="event-content">
+                        <h4>বার্ষিক ক্রীড়া প্রতিযোগিতা</h4>
+                        <p class="event-time">⏰ সকাল ৯:০০ - বিকাল ৪:০০</p>
+                        <p class="event-location">📍 স্কুল মাঠ</p>
+                        <p class="event-description">বছরের সবচেয়ে বড় ক্রীড়া উৎসব। সব শ্রেণীর শিক্ষার্থীদের অংশগ্রহণে বিভিন্ন ইভেন্ট অনুষ্ঠিত হবে।</p>
+                        <div class="event-tags">
+                            <span class="event-tag sports">ক্রীড়া</span>
+                            <span class="event-tag competition">প্রতিযোগিতা</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <div class="date-day">২৫</div>
+                        <div class="date-month">ডিসেম্বর</div>
+                    </div>
+                    <div class="event-content">
+                        <h4>বছর শেষ অনুষ্ঠান</h4>
+                        <p class="event-time">⏰ সকাল ১০:০০ - দুপুর ১:০০</p>
+                        <p class="event-location">📍 স্কুল অডিটোরিয়াম</p>
+                        <p class="event-description">সাংস্কৃতিক অনুষ্ঠান, পুরস্কার বিতরণী এবং শিক্ষার্থীদের পরিবেশনা। অভিভাবকদের উপস্থিতি কাম্য।</p>
+                        <div class="event-tags">
+                            <span class="event-tag cultural">সাংস্কৃতিক</span>
+                            <span class="event-tag ceremony">অনুষ্ঠান</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <div class="date-day">৩১</div>
+                        <div class="date-month">ডিসেম্বর</div>
+                    </div>
+                    <div class="event-content">
+                        <h4>শীতকালীন ছুটি শুরু</h4>
+                        <p class="event-time">⏰ সমস্ত দিন</p>
+                        <p class="event-location">📍 স্কুল বন্ধ</p>
+                        <p class="event-description">শীতকালীন ছুটি শুরু। ৫ই জানুয়ারি স্কুল খুলবে। সবাইকে শুভ ছুটির শুভেচ্ছা।</p>
+                        <div class="event-tags">
+                            <span class="event-tag holiday">ছুটি</span>
+                            <span class="event-tag notice">নোটিশ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <div class="date-day">৫</div>
+                        <div class="date-month">জানুয়ারি</div>
+                    </div>
+                    <div class="event-content">
+                        <h4>স্কুল পুনরায় খোলা</h4>
+                        <p class="event-time">⏰ সকাল ৯:০০</p>
+                        <p class="event-location">📍 স্কুল</p>
+                        <p class="event-description">শীতকালীন ছুটি শেষে স্কুল পুনরায় খোলা হচ্ছে। সবাইকে সময়মতো উপস্থিত হওয়ার জন্য অনুরোধ করা হলো।</p>
+                        <div class="event-tags">
+                            <span class="event-tag academic">একাডেমিক</span>
+                            <span class="event-tag reopening">পুনরায় খোলা</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <div class="date-day">১৫</div>
+                        <div class="date-month">জানুয়ারি</div>
+                    </div>
+                    <div class="event-content">
+                        <h4>বিজ্ঞান মেলা ২০২৫</h4>
+                        <p class="event-time">⏰ সকাল ১০:০০ - বিকাল ৩:০০</p>
+                        <p class="event-location">📍 স্কুল মাঠ</p>
+                        <p class="event-description">শিক্ষার্থীদের বিজ্ঞান প্রজেক্ট প্রদর্শনী। সেরা প্রজেক্টের জন্য পুরস্কার প্রদান করা হবে।</p>
+                        <div class="event-tags">
+                            <span class="event-tag science">বিজ্ঞান</span>
+                            <span class="event-tag exhibition">প্রদর্শনী</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 6 -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <div class="date-day">২১</div>
+                        <div class="date-month">ফেব্রুয়ারি</div>
+                    </div>
+                    <div class="event-content">
+                        <h4>আন্তর্জাতিক মাতৃভাষা দিবস</h4>
+                        <p class="event-time">⏰ সকাল ৮:০০ - ১০:০০</p>
+                        <p class="event-location">📍 স্কুল প্রাঙ্গণ</p>
+                        <p class="event-description">ভাষা শহীদদের স্মরণে আলোচনা সভা ও সাংস্কৃতিক অনুষ্ঠান। সবাইকে শহীদ মিনারে ফুল দিতে অনুরোধ করা হলো।</p>
+                        <div class="event-tags">
+                            <span class="event-tag national">জাতীয়</span>
+                            <span class="event-tag cultural">সাংস্কৃতিক</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- গ্যালারির ছবি ২ -->
-            <div class="gallery-item">
-                <img src="images/gallery2.jpg" alt="সাংস্কৃতিক অনুষ্ঠান" onclick="openLightbox(this)">
-                <div class="gallery-caption">সাংস্কৃতিক অনুষ্ঠান</div>
-            </div>
-            <!-- গ্যালারির ছবি ৩ -->
-            <div class="gallery-item">
-                <img src="images/gallery3.jpg" alt="পুরস্কার বিতরণী" onclick="openLightbox(this)">
-                <div class="gallery-caption">পুরস্কার বিতরণী</div>
-            </div>
-            <!-- গ্যালারির ছবি ৪ -->
-            <div class="gallery-item">
-                <img src="./galary/img1.jpg" alt="বিতর্ক প্রতিযোগিতা" onclick="openLightbox(this)">
-                <div class="gallery-caption">বিতর্ক প্রতিযোগিতা</div>
-            </div>
-            <!-- গ্যালারির ছবি ৫ -->
-            <div class="gallery-item">
-                <img src="images/gallery5.jpg" alt="শিক্ষা সফর" onclick="openLightbox(this)">
-                <div class="gallery-caption">শিক্ষা সফর</div>
-            </div>
-            <!-- গ্যালারির ছবি ৬ -->
-            <div class="gallery-item">
-                <img src="images/gallery6.jpg" alt="বিজ্ঞান মেলা" onclick="openLightbox(this)">
-                <div class="gallery-caption">বিজ্ঞান মেলা</div>
+
+            <!-- Upcoming Events Summary -->
+            <div class="upcoming-events">
+                <h3>দ্রষ্টব্য তারিখসমূহ</h3>
+                <div class="upcoming-list">
+                    <div class="upcoming-item">
+                        <span class="upcoming-date">জানুয়ারি ১৫</span>
+                        <span class="upcoming-title">ভর্তি কার্যক্রম শুরু</span>
+                    </div>
+                    <div class="upcoming-item">
+                        <span class="upcoming-date">ফেব্রুয়ারি ১০</span>
+                        <span class="upcoming-title">ভর্তি পরীক্ষা</span>
+                    </div>
+                    <div class="upcoming-item">
+                        <span class="upcoming-date">ফেব্রুয়ারি ২০</span>
+                        <span class="upcoming-title">মেধাতালিকা প্রকাশ</span>
+                    </div>
+                    <div class="upcoming-item">
+                        <span class="upcoming-date">মার্চ ১</span>
+                        <span class="upcoming-title">নতুন শিক্ষাবর্ষ শুরু</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
-<!-- Lightbox Modal -->
-<div id="lightbox" class="lightbox">
-    <span class="close-btn" onclick="closeLightbox()">&times;</span>
-    <span class="nav-btn prev-btn" onclick="changeImage(-1)">&#10094;</span>
-    <span class="nav-btn next-btn" onclick="changeImage(1)">&#10095;</span>
-    <img class="lightbox-image" id="lightbox-img">
-    <div class="lightbox-caption" id="lightbox-caption"></div>
-</div>
-    <!-- Admission Process Section (এখানে যোগ করুন) -->
+           <!-- Admission Process Section (এখানে যোগ করুন) -->
     <section id="admission-process" class="section-padding">
         <div class="container">
             <h2>ভর্তি প্রক্রিয়া</h2>
@@ -471,6 +712,55 @@
         </div>
     </section>
 
+    <!-- Gallery Section -->
+<section id="gallery" class="section-padding bg-light">
+    <div class="container">
+        <h2>আমাদের গ্যালারি</h2>
+        <div class="gallery-grid">
+            <!-- গ্যালারির ছবি ১ -->
+            <div class="gallery-item">
+                <img src="images/gallery1.jpg" alt="বার্ষিক ক্রীড়া প্রতিযোগিতা" onclick="openLightbox(this)">
+                <div class="gallery-caption">বার্ষিক ক্রীড়া প্রতিযোগিতা</div>
+            </div>
+            <!-- গ্যালারির ছবি ২ -->
+            <div class="gallery-item">
+                <img src="images/gallery2.jpg" alt="সাংস্কৃতিক অনুষ্ঠান" onclick="openLightbox(this)">
+                <div class="gallery-caption">সাংস্কৃতিক অনুষ্ঠান</div>
+            </div>
+            <!-- গ্যালারির ছবি ৩ -->
+            <div class="gallery-item">
+                <img src="images/gallery3.jpg" alt="পুরস্কার বিতরণী" onclick="openLightbox(this)">
+                <div class="gallery-caption">পুরস্কার বিতরণী</div>
+            </div>
+            <!-- গ্যালারির ছবি ৪ -->
+            <div class="gallery-item">
+                <img src="./galary/img1.jpg" alt="বিতর্ক প্রতিযোগিতা" onclick="openLightbox(this)">
+                <div class="gallery-caption">বিতর্ক প্রতিযোগিতা</div>
+            </div>
+            <!-- গ্যালারির ছবি ৫ -->
+            <div class="gallery-item">
+                <img src="images/gallery5.jpg" alt="শিক্ষা সফর" onclick="openLightbox(this)">
+                <div class="gallery-caption">শিক্ষা সফর</div>
+            </div>
+            <!-- গ্যালারির ছবি ৬ -->
+            <div class="gallery-item">
+                <img src="images/gallery6.jpg" alt="বিজ্ঞান মেলা" onclick="openLightbox(this)">
+                <div class="gallery-caption">বিজ্ঞান মেলা</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <span class="nav-btn prev-btn" onclick="changeImage(-1)">&#10094;</span>
+    <span class="nav-btn next-btn" onclick="changeImage(1)">&#10095;</span>
+    <img class="lightbox-image" id="lightbox-img">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+
     <!-- Contact Section (এখানে যোগ করুন) -->
     <section id="contact" class="section-padding bg-light">
         <div class="container">
@@ -510,7 +800,7 @@
                     <h3>আমাদের ঠিকানা</h3>
                     <div class="contact-item">
                         <span class="icon">📍</span>
-                        <p>হায়দরগঞ্জ বাজার, হায়দরগঞ্জ,<br>চাঁদপুর সদর, চাঁদপুর</p>
+                        <p>হায়দরগঞ্জ বাজার, হায়দরগঞ্জ,<br>রায়পুর, লক্ষ্মীপুর</p>
                     </div>
                     <div class="contact-item">
                         <span class="icon">📞</span>
