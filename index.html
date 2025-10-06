@@ -12,31 +12,30 @@
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <a href="#home" class="logo-link">
-                <div class="logo">
-                    <img src="logo.png" alt="Jonaki Ideal School Logo">
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#home">হোম</a></li>
-                <li><a href="#about">আমাদের সম্পর্কে</a></li>
-                <li><a href="#teachers">শিক্ষকবৃন্দ</a></li>
-                <li><a href="authority.html">কর্তৃপক্ষ</a></li>
-                <li><a href="#facilities">সুবিধা</a></li>
-                <li><a href="#admission" class="admission-btn">এডমিশন</a></li>
-                <li><a href="#contact">যোগাযোগ</a></li>
-                <li><a href="#">আরো</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+   <header>
+    <nav class="navbar">
+        <a href="#home" class="logo-link">
+            <div class="logo">
+                <img src="logo.png" alt="Jonaki Ideal School Logo">
             </div>
-        </nav>
-    </header>
-
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">হোম</a></li>
+            <li><a href="#about">আমাদের সম্পর্কে</a></li>
+            <li><a href="#teachers">শিক্ষকবৃন্দ</a></li>
+            <li><a href="authority.html">কর্তৃপক্ষ</a></li>
+            <li><a href="#facilities">সুবিধা</a></li>
+            <li><a href="#admission-process" class="admission-btn">এডমিশন</a></li>
+            <li><a href="#contact">যোগাযোগ</a></li>
+            <li><a href="#">আরো</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+</header>
     <main>
         <section id="home" class="banner">
             <div>
@@ -198,50 +197,230 @@
             </div>
         </section>
 
-        <!-- Gallery Section -->
-        <section id="gallery" class="section-padding bg-light">
-            <div class="container">
-                <h2>আমাদের গ্যালারি</h2>
-                <div class="gallery-grid">
-                    <!-- গ্যালারির ছবি ১ -->
-                    <div class="gallery-item">
-                        <a href="images/gallery1.jpg" target="_blank">
-                            <img src="images/gallery1.jpg" alt="বার্ষিক ক্রীড়া প্রতিযোগিতা">
-                        </a>
+       <!-- Gallery Section -->
+<section id="gallery" class="section-padding bg-light">
+    <div class="container">
+        <h2>আমাদের গ্যালারি</h2>
+        <div class="gallery-grid">
+            <!-- গ্যালারির ছবি ১ -->
+            <div class="gallery-item">
+                <img src="images/gallery1.jpg" alt="বার্ষিক ক্রীড়া প্রতিযোগিতা" onclick="openLightbox(this)">
+                <div class="gallery-caption">বার্ষিক ক্রীড়া প্রতিযোগিতা</div>
+            </div>
+            <!-- গ্যালারির ছবি ২ -->
+            <div class="gallery-item">
+                <img src="images/gallery2.jpg" alt="সাংস্কৃতিক অনুষ্ঠান" onclick="openLightbox(this)">
+                <div class="gallery-caption">সাংস্কৃতিক অনুষ্ঠান</div>
+            </div>
+            <!-- গ্যালারির ছবি ৩ -->
+            <div class="gallery-item">
+                <img src="images/gallery3.jpg" alt="পুরস্কার বিতরণী" onclick="openLightbox(this)">
+                <div class="gallery-caption">পুরস্কার বিতরণী</div>
+            </div>
+            <!-- গ্যালারির ছবি ৪ -->
+            <div class="gallery-item">
+                <img src="./galary/img1.jpg" alt="বিতর্ক প্রতিযোগিতা" onclick="openLightbox(this)">
+                <div class="gallery-caption">বিতর্ক প্রতিযোগিতা</div>
+            </div>
+            <!-- গ্যালারির ছবি ৫ -->
+            <div class="gallery-item">
+                <img src="images/gallery5.jpg" alt="শিক্ষা সফর" onclick="openLightbox(this)">
+                <div class="gallery-caption">শিক্ষা সফর</div>
+            </div>
+            <!-- গ্যালারির ছবি ৬ -->
+            <div class="gallery-item">
+                <img src="images/gallery6.jpg" alt="বিজ্ঞান মেলা" onclick="openLightbox(this)">
+                <div class="gallery-caption">বিজ্ঞান মেলা</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <span class="nav-btn prev-btn" onclick="changeImage(-1)">&#10094;</span>
+    <span class="nav-btn next-btn" onclick="changeImage(1)">&#10095;</span>
+    <img class="lightbox-image" id="lightbox-img">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+    <!-- Admission Process Section (এখানে যোগ করুন) -->
+    <section id="admission-process" class="section-padding">
+        <div class="container">
+            <h2>ভর্তি প্রক্রিয়া</h2>
+            <div class="process-steps">
+                <!-- Step 1 -->
+                <div class="step">
+                    <div class="step-number">১</div>
+                    <div class="step-icon">📝</div>
+                    <h4>আবেদন ফর্ম সংগ্রহ</h4>
+                    <p>স্কুল অফিস থেকে সরাসরি আবেদন ফর্ম সংগ্রহ করুন অথবা আমাদের ওয়েবসাইট থেকে ডাউনলোড করুন</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="step">
+                    <div class="step-number">২</div>
+                    <div class="step-icon">📄</div>
+                    <h4>নথি জমা দিন</h4>
+                    <p>জন্ম নিবন্ধন সনদ, পূর্ববর্তী ক্লাসের মার্কশিট, ২ কপি পাসপোর্ট সাইজ ছবি জমা দিন</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="step">
+                    <div class="step-number">৩</div>
+                    <div class="step-icon">📝</div>
+                    <h4>ভর্তি পরীক্ষা</h4>
+                    <p>নির্ধারিত তারিখে ভর্তি পরীক্ষায় অংশগ্রহণ করুন (১ম থেকে ৯ম শ্রেণীর জন্য)</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="step">
+                    <div class="step-number">৪</div>
+                    <div class="step-icon">✅</div>
+                    <h4>মনোনয়ন ও ভর্তি</h4>
+                    <p>মেধাতালিকা অনুযায়ী মনোনয়ন এবং প্রয়োজনীয় ফি জমা দিয়ে ভর্তি প্রক্রিয়া সম্পন্ন করুন</p>
+                </div>
+            </div>
+
+            <!-- Admission Requirements -->
+            <div class="admission-requirements">
+                <h3>ভর্তির প্রয়োজনীয় কাগজপত্র</h3>
+                <div class="requirements-grid">
+                    <div class="requirement-card">
+                        <div class="req-icon">📋</div>
+                        <h4>আবেদন ফর্ম</h4>
+                        <p>সঠিকভাবে পূরণকৃত আবেদন ফর্ম</p>
                     </div>
-                    <!-- গ্যালারির ছবি ২ -->
-                    <div class="gallery-item">
-                        <a href="images/gallery2.jpg" target="_blank">
-                            <img src="images/gallery2.jpg" alt="সাংস্কৃতিক অনুষ্ঠান">
-                        </a>
+                    <div class="requirement-card">
+                        <div class="req-icon">👶</div>
+                        <h4>জন্ম সনদ</h4>
+                        <p>জাতীয় ID card/জন্ম নিবন্ধন সনদ</p>
                     </div>
-                    <!-- গ্যালারির ছবি ৩ -->
-                    <div class="gallery-item">
-                        <a href="images/gallery3.jpg" target="_blank">
-                            <img src="images/gallery3.jpg" alt="পুরস্কার বিতরণী">
-                        </a>
+                    <div class="requirement-card">
+                        <div class="req-icon">📊</div>
+                        <h4>মার্কশিট</h4>
+                        <p>পূর্ববর্তী ক্লাসের মূল মার্কশিট</p>
                     </div>
-                    <!-- গ্যালারির ছবি ৪ -->
-                    <div class="gallery-item">
-                        <a href="images/gallery4.jpg" target="_blank">
-                            <img src="images/gallery4.jpg" alt="বিতর্ক প্রতিযোগিতা">
-                        </a>
+                    <div class="requirement-card">
+                        <div class="req-icon">🖼️</div>
+                        <h4>ছবি</h4>
+                        <p>২ কপি পাসপোর্ট সাইজ রঙ্গিন ছবি</p>
                     </div>
-                    <!-- গ্যালারির ছবি ৫ -->
-                    <div class="gallery-item">
-                        <a href="images/gallery5.jpg" target="_blank">
-                            <img src="images/gallery5.jpg" alt="শিক্ষা সফর">
-                        </a>
+                    <div class="requirement-card">
+                        <div class="req-icon">🏠</div>
+                        <h4>বাসার সার্টিফিকেট</h4>
+                        <p>সিটি কর্পোরেশন/ইউনিয়নের সার্টিফিকেট</p>
                     </div>
-                    <!-- গ্যালারির ছবি ৬ -->
-                    <div class="gallery-item">
-                        <a href="images/gallery6.jpg" target="_blank">
-                            <img src="images/gallery6.jpg" alt="বিজ্ঞান মেলা">
-                        </a>
+                    <div class="requirement-card">
+                        <div class="req-icon">📃</div>
+                        <h4>ট্রান্সফার সার্টিফিকেট</h4>
+                        <p>প্রযোজ্য ক্ষেত্রে পূর্ববর্তী স্কুলের TC</p>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Important Dates -->
+            <div class="important-dates">
+                <h3>গুরুত্বপূর্ণ তারিখসমূহ</h3>
+                <div class="dates-grid">
+                    <div class="date-card">
+                        <div class="date-badge">জানুয়ারি ১৫</div>
+                        <h4>ভর্তি কার্যক্রম শুরু</h4>
+                        <p>২০২৫ শিক্ষাবর্ষের ভর্তি প্রক্রিয়া শুরু</p>
+                    </div>
+                    <div class="date-card">
+                        <div class="date-badge">ফেব্রুয়ারি ১০</div>
+                        <h4>ভর্তি পরীক্ষা</h4>
+                        <p>১ম থেকে ৯ম শ্রেণীর ভর্তি পরীক্ষা</p>
+                    </div>
+                    <div class="date-card">
+                        <div class="date-badge">ফেব্রুয়ারি ২০</div>
+                        <h4>মেধাতালিকা প্রকাশ</h4>
+                        <p>ভর্তি পরীক্ষার ফলাফল প্রকাশ</p>
+                    </div>
+                    <div class="date-card">
+                        <div class="date-badge">মার্চ ১</div>
+                        <h4>ক্লাস শুরু</h4>
+                        <p>২০২৫ শিক্ষাবর্ষের ক্লাস শুরু</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download Section -->
+            <div class="download-section">
+                <h3>ডাউনলোড</h3>
+                <div class="download-buttons">
+                    <a href="docs/admission-form.pdf" class="download-btn" download>
+                        <span class="btn-icon">📥</span>
+                        ভর্তি ফর্ম ডাউনলোড
+                    </a>
+                    <a href="docs/fee-structure.pdf" class="download-btn" download>
+                        <span class="btn-icon">💰</span>
+                        ফি স্ট্রাকচার ডাউনলোড
+                    </a>
+                    <a href="docs/prospectus.pdf" class="download-btn" download>
+                        <span class="btn-icon">📗</span>
+                        প্রসপেক্টাস ডাউনলোড
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (এখানে যোগ করুন) -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2>যোগাযোগ করুন</h2>
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="আপনার পুরো নাম*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="ইমেইল ঠিকানা*" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="ফোন নম্বর">
+                        </div>
+                        <div class="form-group">
+                            <select id="subject" name="subject" required>
+                                <option value="">বিষয় নির্বাচন করুন*</option>
+                                <option value="admission">ভর্তি সম্পর্কিত</option>
+                                <option value="information">সাধারণ তথ্য</option>
+                                <option value="complaint">অভিযোগ</option>
+                                <option value="suggestion">পরামর্শ</option>
+                                <option value="other">অন্যান্য</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="আপনার বার্তা লিখুন*" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">বার্তা পাঠান</button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3>আমাদের ঠিকানা</h3>
+                    <div class="contact-item">
+                        <span class="icon">📍</span>
+                        <p>হায়দরগঞ্জ বাজার, হায়দরগঞ্জ,<br>চাঁদপুর সদর, চাঁদপুর</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📞</span>
+                        <p>+880 1303-255164</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">✉️</span>
+                        <p>info@jonakiidealschool.edu.bd</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">🕒</span>
+                        <p>শনি - বৃহস্পতিবার: সকাল ৯টা - বিকাল ৫টা</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     </main>
     
                             <!-- Founder Section -->
