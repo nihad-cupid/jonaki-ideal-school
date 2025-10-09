@@ -104,6 +104,7 @@ header {
     transition: 0.3s;
 }
 
+
 /* Banner Section */
 .banner {
     height: 70vh;
@@ -114,7 +115,42 @@ header {
     color: white;
     text-align: center;
 }
+/* Active Navigation Styles */
+.nav-links a.active {
+    color: var(--secondary-color) !important;
+    font-weight: 700;
+    position: relative;
+}
 
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+}
+
+/* Admission Button Active State */
+.nav-links a.admission-btn.active {
+    background: var(--secondary-color) !important;
+    color: #000 !important;
+    border: 2px solid var(--secondary-color);
+}
+
+.nav-links a.admission-btn.active::after {
+    display: none;
+}
+
+/* Mobile Menu Active State */
+@media (max-width: 768px) {
+    .nav-links a.active::after {
+        bottom: -2px;
+        height: 2px;
+    }
+}
 .banner h1 {
     font-size: 3.5em;
     margin-bottom: 10px;
@@ -1873,5 +1909,158 @@ a.admission-btn:hover{
     
     .teacher-group h3 {
         font-size: 1.6rem;
+    }
+}
+/* Committee Card Phone Number Style */
+.committee-card .member-phone {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.committee-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.committee-card:hover {
+    transform: translateY(-5px);
+}
+/* Admission Page Specific Styles */
+.admission-page-banner {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2c5aa0 100%);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.admission-page-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 221, 87, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+}
+
+.banner-overlay {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.admission-banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding: 80px 20px;
+}
+
+.admission-page-banner h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.admission-floating-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.admission-floating-tag {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    animation: floatUpDown 3s ease-in-out infinite;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.admission-floating-tag:nth-child(1) { animation-delay: 0s; }
+.admission-floating-tag:nth-child(2) { animation-delay: 0.5s; }
+.admission-floating-tag:nth-child(3) { animation-delay: 1s; }
+.admission-floating-tag:nth-child(4) { animation-delay: 1.5s; }
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admission-page-banner {
+        min-height: 50vh;
+    }
+    
+    .admission-banner-content {
+        padding: 60px 20px;
+    }
+    
+    .admission-page-banner h1 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+    
+    .admission-floating-tags {
+        gap: 10px;
+    }
+    
+    .admission-floating-tag {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .admission-page-banner {
+        min-height: 40vh;
+    }
+    
+    .admission-banner-content {
+        padding: 40px 20px;
+    }
+    
+    .admission-page-banner h1 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    
+    .admission-floating-tags {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .admission-floating-tag {
+        padding: 8px 20px;
+        font-size: 0.85rem;
     }
 }
