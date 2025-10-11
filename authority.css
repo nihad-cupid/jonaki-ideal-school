@@ -1,0 +1,151 @@
+/* css/authority.css - কর্তৃপক্ষ পেজের স্টাইলস */
+
+/* Authority Section Styles */
+.committee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.committee-card {
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    border-left: 5px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.committee-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.committee-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.committee-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Committee Card Phone Number Style */
+.committee-card .member-phone {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+/* Authority Page Specific Responsive Design */
+@media (max-width: 768px) {
+    .committee-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .committee-card {
+        padding: 25px 20px;
+    }
+    
+    .committee-card h4 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .committee-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .committee-card {
+        padding: 20px 15px;
+    }
+    
+    .committee-card h4 {
+        font-size: 1rem;
+    }
+    
+    .committee-card p {
+        font-size: 0.9rem;
+    }
+    
+    .member-phone {
+        font-size: 0.85rem;
+    }
+}
+
+/* Additional Authority Page Styles */
+.authority-section {
+    padding: 80px 0;
+}
+
+.authority-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.authority-header h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.authority-header p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Committee Member Role Styling */
+.member-role {
+    color: var(--secondary-color) !important;
+    font-weight: 600;
+    margin-bottom: 5px !important;
+}
+
+.member-name {
+    color: var(--primary-color) !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 10px !important;
+}
+
+/* Responsive Authority Header */
+@media (max-width: 768px) {
+    .authority-section {
+        padding: 60px 0;
+    }
+    
+    .authority-header h2 {
+        font-size: 2rem;
+    }
+    
+    .authority-header p {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .authority-section {
+        padding: 40px 0;
+    }
+    
+    .authority-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .authority-header p {
+        font-size: 0.9rem;
+    }
+}

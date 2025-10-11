@@ -1,0 +1,428 @@
+/* css/teachers.css - শিক্ষকবৃন্দ পেজের স্টাইলস (ফিক্সড) */
+
+/* Teachers Page Specific Styles */
+.teachers-page .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Teachers Attractive Banner - FIXED */
+.teachers-banner {
+    background: linear-gradient(135deg, #001f3f 0%, #003366 50%, #004080 100%);
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px; /* ন্যাভবার থেকে দূরত্ব */
+    padding-bottom: 80px; /* নিচ থেকেও দূরত্ব */
+}
+
+.banner-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 60px 20px; /* উপরে-নিচে আরও স্পেস */
+}
+
+.banner-text {
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0; /* লেখার চারপাশে স্পেস */
+}
+
+.banner-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 30px; /* বেশি দূরত্ব */
+    margin-top: 20px; /* উপরে দূরত্ব */
+    background: linear-gradient(45deg, #ffffff, #ffdd57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+}
+
+.banner-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 40px; /* বেশি দূরত্ব */
+    opacity: 0.9;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+.banner-cta {
+    display: inline-block;
+    background: rgba(255, 221, 87, 0.2);
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 2px solid var(--secondary-color);
+    margin-top: 20px; /* উপরে দূরত্ব */
+}
+
+.cta-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+/* Floating Elements - FIXED (আইকনগুলো দুই পাশে) */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floating-item {
+    position: absolute;
+    font-size: 3rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* বাম পাশের আইকনগুলো */
+.item-1 {
+    top: 25%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.item-2 {
+    top: 65%;
+    left: 15%;
+    animation-delay: 2s;
+}
+
+.item-3 {
+    top: 45%;
+    left: 5%;
+    animation-delay: 4s;
+}
+
+/* ডান পাশের আইকনগুলো */
+.item-4 {
+    top: 30%;
+    right: 10%;
+    animation-delay: 1s;
+}
+
+.item-5 {
+    top: 70%;
+    right: 15%;
+    animation-delay: 3s;
+}
+
+.item-6 {
+    top: 50%;
+    right: 5%;
+    animation-delay: 5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+}
+
+/* Teacher Groups */
+.teacher-group {
+    margin-bottom: 50px;
+}
+
+.teacher-group:last-child {
+    margin-bottom: 0;
+}
+
+.teacher-group h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Principal & Assistant Principal Cards */
+.teacher-group.featured-group {
+    margin-bottom: 60px;
+}
+
+.teacher-group.featured-group .teacher-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.teacher-group.featured-group .teacher-card {
+    flex: 0 1 400px;
+    max-width: 400px;
+    margin: 0;
+}
+
+/* Regular Teachers Grid */
+.teacher-group.regular-group .teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 0 auto;
+}
+
+/* Teacher Cards */
+.teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.teacher-card {
+    background: #fff;
+    padding: 30px 25px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.teacher-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.teacher-card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    border: 2px solid var(--primary-color);
+}
+
+.teacher-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.teacher-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.teacher-card .teacher-phone {
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Section Headers */
+.teacher-group h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+}
+
+/* Responsive Design for Teachers Page */
+@media (max-width: 768px) {
+    .teachers-banner {
+        min-height: 60vh;
+        padding-top: 60px; /* মোবাইলে কম প্যাডিং */
+        padding-bottom: 60px;
+    }
+    
+    .banner-content {
+        padding: 40px 15px; /* মোবাইলে কম প্যাডিং */
+    }
+    
+    .banner-text {
+        padding: 20px 0; /* মোবাইলে কম প্যাডিং */
+    }
+    
+    .banner-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    
+    .banner-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        padding: 0 10px;
+    }
+    
+    .banner-cta {
+        margin-top: 15px;
+        padding: 12px 25px;
+    }
+    
+    /* মোবাইলে আইকনগুলো ছোট করব */
+    .floating-item {
+        font-size: 2rem;
+    }
+    
+    /* মোবাইলে আইকনগুলোর পজিশন সামঞ্জস্য */
+    .item-1 {
+        top: 20%;
+        left: 5%;
+    }
+    
+    .item-2 {
+        top: 60%;
+        left: 8%;
+    }
+    
+    .item-3 {
+        top: 40%;
+        left: 2%;
+    }
+    
+    .item-4 {
+        top: 25%;
+        right: 5%;
+    }
+    
+    .item-5 {
+        top: 65%;
+        right: 8%;
+    }
+    
+    .item-6 {
+        top: 45%;
+        right: 2%;
+    }
+    
+    .teacher-group.featured-group .teacher-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .teacher-group.featured-group .teacher-card {
+        flex: 1;
+        max-width: 100%;
+    }
+    
+    .teacher-group.regular-group .teacher-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .teacher-card {
+        padding: 25px 20px;
+    }
+    
+    .teacher-card img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .teachers-banner {
+        min-height: 50vh;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .banner-content {
+        padding: 30px 10px;
+    }
+    
+    .banner-text {
+        padding: 15px 0;
+    }
+    
+    .teacher-group.regular-group .teacher-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .teacher-group h3 {
+        font-size: 1.6rem;
+    }
+    
+    .banner-title {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+    
+    .banner-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+    
+    .banner-cta {
+        margin-top: 10px;
+        padding: 10px 20px;
+    }
+    
+    /* খুব ছোট স্ক্রিনে আইকনগুলো আরও ছোট */
+    .floating-item {
+        font-size: 1.5rem;
+    }
+    
+    .item-1 {
+        top: 15%;
+        left: 3%;
+    }
+    
+    .item-2 {
+        top: 55%;
+        left: 5%;
+    }
+    
+    .item-3 {
+        top: 35%;
+        left: 1%;
+    }
+    
+    .item-4 {
+        top: 20%;
+        right: 3%;
+    }
+    
+    .item-5 {
+        top: 60%;
+        right: 5%;
+    }
+    
+    .item-6 {
+        top: 40%;
+        right: 1%;
+    }
+}
