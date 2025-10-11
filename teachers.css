@@ -1,4 +1,4 @@
-/* css/teachers.css - শিক্ষকবৃন্দ পেজের স্টাইলস (ফিক্সড) */
+/* css/teachers.css - শিক্ষকবৃন্দ পেজের স্টাইলস (সাইজ ফিক্সড) */
 
 /* Teachers Page Specific Styles */
 .teachers-page .container {
@@ -10,14 +10,14 @@
 /* Teachers Attractive Banner - FIXED */
 .teachers-banner {
     background: linear-gradient(135deg, #001f3f 0%, #003366 50%, #004080 100%);
-    min-height: 70vh;
+    min-height: 50vh; /* সাইজ কমিয়েছি */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    padding-top: 80px; /* ন্যাভবার থেকে দূরত্ব */
-    padding-bottom: 80px; /* নিচ থেকেও দূরত্ব */
+    padding-top: 80px; 
+    padding-bottom: 60px;
 }
 
 .banner-overlay {
@@ -38,21 +38,21 @@
     position: relative;
     z-index: 2;
     width: 100%;
-    padding: 60px 20px; /* উপরে-নিচে আরও স্পেস */
+    padding: 40px 20px; /* প্যাডিং কমিয়েছি */
 }
 
 .banner-text {
     color: white;
     max-width: 800px;
     margin: 0 auto;
-    padding: 40px 0; /* লেখার চারপাশে স্পেস */
+    padding: 20px 0; /* প্যাডিং কমিয়েছি */
 }
 
 .banner-title {
-    font-size: 4rem;
+    font-size: 3rem; /* ফন্ট সাইজ কমিয়েছি */
     font-weight: 800;
-    margin-bottom: 30px; /* বেশি দূরত্ব */
-    margin-top: 20px; /* উপরে দূরত্ব */
+    margin-bottom: 20px;
+    margin-top: 10px;
     background: linear-gradient(45deg, #ffffff, #ffdd57);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -61,29 +61,29 @@
 }
 
 .banner-subtitle {
-    font-size: 1.4rem;
-    margin-bottom: 40px; /* বেশি দূরত্ব */
+    font-size: 1.2rem; /* ফন্ট সাইজ কমিয়েছি */
+    margin-bottom: 25px;
     opacity: 0.9;
-    line-height: 1.6;
+    line-height: 1.5;
     padding: 0 20px;
 }
 
 .banner-cta {
     display: inline-block;
     background: rgba(255, 221, 87, 0.2);
-    padding: 15px 30px;
+    padding: 12px 25px;
     border-radius: 50px;
     border: 2px solid var(--secondary-color);
-    margin-top: 20px; /* উপরে দূরত্ব */
+    margin-top: 15px;
 }
 
 .cta-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--secondary-color);
 }
 
-/* Floating Elements - FIXED (আইকনগুলো দুই পাশে) */
+/* Floating Elements */
 .floating-elements {
     position: absolute;
     top: 0;
@@ -95,44 +95,44 @@
 
 .floating-item {
     position: absolute;
-    font-size: 3rem;
+    font-size: 2.5rem; /* আইকন সাইজ কমিয়েছি */
     animation: float 6s ease-in-out infinite;
 }
 
 /* বাম পাশের আইকনগুলো */
 .item-1 {
-    top: 25%;
+    top: 20%;
     left: 10%;
     animation-delay: 0s;
 }
 
 .item-2 {
-    top: 65%;
+    top: 60%;
     left: 15%;
     animation-delay: 2s;
 }
 
 .item-3 {
-    top: 45%;
+    top: 40%;
     left: 5%;
     animation-delay: 4s;
 }
 
 /* ডান পাশের আইকনগুলো */
 .item-4 {
-    top: 30%;
+    top: 25%;
     right: 10%;
     animation-delay: 1s;
 }
 
 .item-5 {
-    top: 70%;
+    top: 65%;
     right: 15%;
     animation-delay: 3s;
 }
 
 .item-6 {
-    top: 50%;
+    top: 45%;
     right: 5%;
     animation-delay: 5s;
 }
@@ -142,7 +142,7 @@
         transform: translateY(0px) rotate(0deg);
     }
     50% {
-        transform: translateY(-20px) rotate(10deg);
+        transform: translateY(-15px) rotate(10deg); /* এনিমেশন কমিয়েছি */
     }
 }
 
@@ -257,72 +257,74 @@
     display: inline-block;
 }
 
-/* Responsive Design for Teachers Page */
+/* Responsive Design for Teachers Page - MOBILE FIXED */
 @media (max-width: 768px) {
     .teachers-banner {
-        min-height: 60vh;
-        padding-top: 60px; /* মোবাইলে কম প্যাডিং */
-        padding-bottom: 60px;
+        min-height: 40vh; /* মোবাইলে সাইজ কমিয়েছি */
+        padding-top: 90px; 
+        padding-bottom: 40px;
     }
     
     .banner-content {
-        padding: 40px 15px; /* মোবাইলে কম প্যাডিং */
+        padding: 30px 15px; /* মোবাইলে প্যাডিং কমিয়েছি */
     }
     
     .banner-text {
-        padding: 20px 0; /* মোবাইলে কম প্যাডিং */
+        padding: 15px 0; /* মোবাইলে প্যাডিং কমিয়েছি */
     }
     
     .banner-title {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        margin-top: 10px;
+        font-size: 2.2rem; /* মোবাইলে ফন্ট সাইজ কমিয়েছি */
+        margin-bottom: 15px;
+        margin-top: 5px;
     }
     
     .banner-subtitle {
-        font-size: 1.2rem;
-        margin-bottom: 25px;
-        padding: 0 10px;
+        font-size: 1.1rem; /* মোবাইলে ফন্ট সাইজ কমিয়েছি */
+        margin-bottom: 20px;
+        padding: 0 15px;
+        line-height: 1.4;
     }
     
     .banner-cta {
         margin-top: 15px;
-        padding: 12px 25px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
     
     /* মোবাইলে আইকনগুলো ছোট করব */
     .floating-item {
-        font-size: 2rem;
+        font-size: 1.8rem; /* মোবাইলে আইকন সাইজ কমিয়েছি */
     }
     
     /* মোবাইলে আইকনগুলোর পজিশন সামঞ্জস্য */
     .item-1 {
-        top: 20%;
+        top: 15%;
         left: 5%;
     }
     
     .item-2 {
-        top: 60%;
+        top: 55%;
         left: 8%;
     }
     
     .item-3 {
-        top: 40%;
+        top: 35%;
         left: 2%;
     }
     
     .item-4 {
-        top: 25%;
+        top: 20%;
         right: 5%;
     }
     
     .item-5 {
-        top: 65%;
+        top: 60%;
         right: 8%;
     }
     
     .item-6 {
-        top: 45%;
+        top: 40%;
         right: 2%;
     }
     
@@ -354,17 +356,35 @@
 
 @media (max-width: 480px) {
     .teachers-banner {
-        min-height: 50vh;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        min-height: 35vh; /* ছোট মোবাইলে আরও কম */
+        padding-top: 80px;
+        padding-bottom: 30px;
     }
     
     .banner-content {
-        padding: 30px 10px;
+        padding: 20px 10px;
     }
     
     .banner-text {
-        padding: 15px 0;
+        padding: 10px 0;
+    }
+    
+    .banner-title {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+        margin-top: 0;
+    }
+    
+    .banner-subtitle {
+        font-size: 1rem;
+        margin-bottom: 15px;
+        padding: 0 10px;
+    }
+    
+    .banner-cta {
+        margin-top: 12px;
+        padding: 8px 16px;
+        font-size: 0.85rem;
     }
     
     .teacher-group.regular-group .teacher-grid {
@@ -375,54 +395,38 @@
         font-size: 1.6rem;
     }
     
-    .banner-title {
-        font-size: 2rem;
-        margin-bottom: 15px;
-        margin-top: 5px;
-    }
-    
-    .banner-subtitle {
-        font-size: 1.1rem;
-        margin-bottom: 20px;
-    }
-    
-    .banner-cta {
-        margin-top: 10px;
-        padding: 10px 20px;
-    }
-    
     /* খুব ছোট স্ক্রিনে আইকনগুলো আরও ছোট */
     .floating-item {
         font-size: 1.5rem;
     }
     
     .item-1 {
-        top: 15%;
+        top: 12%;
         left: 3%;
     }
     
     .item-2 {
-        top: 55%;
+        top: 52%;
         left: 5%;
     }
     
     .item-3 {
-        top: 35%;
+        top: 32%;
         left: 1%;
     }
     
     .item-4 {
-        top: 20%;
+        top: 17%;
         right: 3%;
     }
     
     .item-5 {
-        top: 60%;
+        top: 57%;
         right: 5%;
     }
     
     .item-6 {
-        top: 40%;
+        top: 37%;
         right: 1%;
     }
 }
