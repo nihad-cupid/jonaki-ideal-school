@@ -430,3 +430,41 @@
         right: 1%;
     }
 }
+/* শিক্ষাগত যোগ্যতার স্টাইল */
+.teacher-qualification {
+    font-size: 0.9rem;
+    color: #e67e22 !important;
+    font-weight: 600;
+    margin: 8px 0;
+    padding: 6px 12px;
+    background: rgba(230, 126, 34, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(230, 126, 34, 0.2);
+    display: inline-block;
+    line-height: 1.3;
+    transition: all 0.3s ease;
+}
+
+/* টিচার কার্ডে হোভার ইফেক্টে যোগ্যতার স্টাইল */
+.teacher-card:hover .teacher-qualification {
+    background: rgba(230, 126, 34, 0.15);
+    border-color: rgba(230, 126, 34, 0.3);
+    transform: scale(1.02);
+}
+
+/* মোবাইল রেস্পন্সিভ স্টাইল */
+@media (max-width: 768px) {
+    .teacher-qualification {
+        font-size: 0.85rem;
+        padding: 5px 10px;
+        margin: 6px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .teacher-qualification {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+        margin: 5px 0;
+    }
+}
