@@ -547,3 +547,71 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileDropdowns();
     console.log('Dropdown functionality loaded');
 });
+// স্মুথ স্ক্রল ফাংশন
+function smoothScroll(target) {
+    if (target.startsWith('#')) {
+        const element = document.querySelector(target);
+        if (element) {
+            const offsetTop = element.offsetTop - 80; // ন্যাভবার的高度 বিবেচনা করে
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+}
+
+// একটিভ লিংক আপডেট ফাংশন
+function updateActiveLink() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= (sectionTop - 100)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}` || 
+            link.getAttribute('href') === `index.html#${current}`) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// ইভেন্ট লিসেনার যোগ করুন
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // শুধুমাত্র হ্যাশ লিংকের জন্য স্মুথ স্ক্রল
+            if (href.includes('#')) {
+                e.preventDefault();
+                const target = href.split('#')[1];
+                smoothScroll(`#${target}`);
+            }
+            
+            // একটিভ ক্লাস আপডেট
+            navLinks.forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+    
+    // স্ক্রল ইভেন্টে একটিভ লিংক আপডেট
+    window.addEventListener('scroll', updateActiveLink);
+});
+
+// হ্যামবার্গার মেনু টগল (যদি থাকে)
+document.querySelector('.hamburger')?.addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+    this.classList.toggle('active');
+});
