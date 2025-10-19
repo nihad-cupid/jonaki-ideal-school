@@ -468,3 +468,200 @@
         margin: 5px 0;
     }
 }
+/* Teachers Banner - Updated */
+.teachers-banner {
+    background: linear-gradient(135deg, #001f3f 0%, #003366 50%, #004080 100%);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.banner-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.banner-text {
+    color: white;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Banner Title - Bigger */
+.banner-title {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 25px;
+    background: linear-gradient(45deg, #ffffff, #ffdd57, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    letter-spacing: 1.5px;
+}
+
+/* Banner Subtitle - Bigger */
+.banner-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+    line-height: 1.4;
+    font-weight: 500;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Floating Elements */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floating-item {
+    position: absolute;
+    font-size: 3rem;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+/* বাম পাশের আইকনগুলো */
+.item-1 {
+    top: 20%;
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.item-2 {
+    top: 65%;
+    left: 12%;
+    animation-delay: 2s;
+}
+
+.item-3 {
+    top: 45%;
+    left: 5%;
+    animation-delay: 4s;
+}
+
+/* ডান পাশের আইকনগুলো */
+.item-4 {
+    top: 25%;
+    right: 8%;
+    animation-delay: 1s;
+}
+
+.item-5 {
+    top: 70%;
+    right: 12%;
+    animation-delay: 3s;
+}
+
+.item-6 {
+    top: 50%;
+    right: 5%;
+    animation-delay: 5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 1200px) {
+    .banner-title {
+        font-size: 3.5rem;
+    }
+    
+    .banner-subtitle {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .teachers-banner {
+        min-height: 50vh;
+        padding: 60px 0;
+    }
+    
+    .banner-title {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+    
+    .banner-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+        line-height: 1.3;
+    }
+    
+    .floating-item {
+        font-size: 2.2rem;
+    }
+    
+    .item-1 { top: 15%; left: 5%; }
+    .item-2 { top: 60%; left: 8%; }
+    .item-3 { top: 40%; left: 2%; }
+    .item-4 { top: 20%; right: 5%; }
+    .item-5 { top: 65%; right: 8%; }
+    .item-6 { top: 45%; right: 2%; }
+}
+
+@media (max-width: 480px) {
+    .teachers-banner {
+        min-height: 45vh;
+        padding: 50px 0;
+    }
+    
+    .banner-title {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+        letter-spacing: 0.5px;
+    }
+    
+    .banner-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+    
+    .floating-item {
+        font-size: 1.8rem;
+    }
+    
+    .item-1 { top: 12%; left: 3%; }
+    .item-2 { top: 55%; left: 5%; }
+    .item-3 { top: 35%; left: 1%; }
+    .item-4 { top: 17%; right: 3%; }
+    .item-5 { top: 62%; right: 5%; }
+    .item-6 { top: 42%; right: 1%; }
+}
