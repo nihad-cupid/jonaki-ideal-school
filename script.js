@@ -564,3 +564,198 @@ window.addEventListener('load', function() {
 
 console.log('Jonaki Ideal School JavaScript loaded');
 
+// ==================== GALLERY TOGGLE FUNCTIONALITY ====================
+function initGalleryToggle() {
+    const galleryGrids = document.querySelectorAll('.gallery-grid');
+    
+    galleryGrids.forEach(grid => {
+        const items = grid.querySelectorAll('.gallery-item');
+        const container = grid.closest('.gallery-container') || grid.parentElement;
+        
+        if (items.length > 3) {
+            // Remove existing toggle button if any
+            const existingBtn = grid.nextElementSibling;
+            if (existingBtn && existingBtn.classList.contains('gallery-toggle-btn')) {
+                existingBtn.remove();
+            }
+            
+            // Create toggle button
+            const toggleBtn = document.createElement('button');
+            toggleBtn.className = 'gallery-toggle-btn';
+            toggleBtn.innerHTML = `
+                আরো দেখুন 
+                <span class="icon">▼</span>
+            `;
+            
+            // Hide items beyond first 3
+            items.forEach((item, index) => {
+                if (index >= 3) {
+                    item.style.display = 'none';
+                    item.classList.add('hidden');
+                }
+            });
+            
+            // Add toggle functionality
+            toggleBtn.addEventListener('click', function() {
+                const isExpanded = this.classList.contains('expanded');
+                
+                if (isExpanded) {
+                    // Collapse - show only first 3
+                    items.forEach((item, index) => {
+                        if (index >= 3) {
+                            // Smooth hide animation
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                                item.classList.add('hidden');
+                            }, 300);
+                        }
+                    });
+                    
+                    setTimeout(() => {
+                        this.innerHTML = 'আরো দেখুন <span class="icon">▼</span>';
+                        this.classList.remove('expanded');
+                    }, 300);
+                    
+                } else {
+                    // Expand - show all
+                    items.forEach((item, index) => {
+                        if (index >= 3) {
+                            item.classList.remove('hidden');
+                            item.style.display = 'block';
+                            
+                            // Smooth show animation with delay
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 50 * (index - 2));
+                        }
+                    });
+                    
+                    setTimeout(() => {
+                        this.innerHTML = 'কম দেখুন <span class="icon">▼</span>';
+                        this.classList.add('expanded');
+                    }, 300);
+                }
+                
+                // Smooth scroll to maintain position
+                setTimeout(() => {
+                    this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 400);
+            });
+            
+            // Add button after gallery grid
+            grid.parentNode.insertBefore(toggleBtn, grid.nextSibling);
+        }
+    });
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Wait a bit for other initializations
+    setTimeout(initGalleryToggle, 100);
+});
+
+// Reinitialize on window resize
+window.addEventListener('resize', function() {
+    setTimeout(initGalleryToggle, 100);
+});
+
+// ==================== FACILITIES TOGGLE FUNCTIONALITY ====================
+function initFacilitiesToggle() {
+    const facilitiesGrids = document.querySelectorAll('.facilities-grid');
+    
+    facilitiesGrids.forEach(grid => {
+        const items = grid.querySelectorAll('.facility-card');
+        const container = grid.closest('.facilities-container') || grid.parentElement;
+        
+        if (items.length > 3) {
+            // Remove existing toggle button if any
+            const existingBtn = grid.nextElementSibling;
+            if (existingBtn && existingBtn.classList.contains('facilities-toggle-btn')) {
+                existingBtn.remove();
+            }
+            
+            // Create toggle button
+            const toggleBtn = document.createElement('button');
+            toggleBtn.className = 'facilities-toggle-btn';
+            toggleBtn.innerHTML = `
+                আরো সুবিধা দেখুন 
+                <span class="icon">▼</span>
+            `;
+            
+            // Hide items beyond first 3
+            items.forEach((item, index) => {
+                if (index >= 3) {
+                    item.style.display = 'none';
+                    item.classList.add('hidden');
+                }
+            });
+            
+            // Add toggle functionality
+            toggleBtn.addEventListener('click', function() {
+                const isExpanded = this.classList.contains('expanded');
+                
+                if (isExpanded) {
+                    // Collapse - show only first 3
+                    items.forEach((item, index) => {
+                        if (index >= 3) {
+                            // Smooth hide animation
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.9)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                                item.classList.add('hidden');
+                            }, 300);
+                        }
+                    });
+                    
+                    setTimeout(() => {
+                        this.innerHTML = 'আরো সুবিধা দেখুন <span class="icon">▼</span>';
+                        this.classList.remove('expanded');
+                    }, 300);
+                    
+                } else {
+                    // Expand - show all
+                    items.forEach((item, index) => {
+                        if (index >= 3) {
+                            item.classList.remove('hidden');
+                            item.style.display = 'block';
+                            
+                            // Smooth show animation with delay
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 50 * (index - 2));
+                        }
+                    });
+                    
+                    setTimeout(() => {
+                        this.innerHTML = 'কম দেখুন <span class="icon">▼</span>';
+                        this.classList.add('expanded');
+                    }, 300);
+                }
+                
+                // Smooth scroll to maintain position
+                setTimeout(() => {
+                    this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 400);
+            });
+            
+            // Add button after facilities grid
+            grid.parentNode.insertBefore(toggleBtn, grid.nextSibling);
+        }
+    });
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Wait a bit for other initializations
+    setTimeout(initFacilitiesToggle, 100);
+});
+
+// Reinitialize on window resize
+window.addEventListener('resize', function() {
+    setTimeout(initFacilitiesToggle, 100);
+});
