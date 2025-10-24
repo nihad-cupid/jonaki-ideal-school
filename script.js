@@ -563,3 +563,4 @@ window.addEventListener('load', function() {
 });
 
 console.log('Jonaki Ideal School JavaScript loaded');
+
