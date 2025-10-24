@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <header>
+<header>
     <nav class="navbar">
         <a href="index.html" class="logo-link">
             <div class="logo">
@@ -26,11 +26,29 @@
             <li><a href="index.html#about">আমাদের সম্পর্কে</a></li>
             <li><a href="teachers.html">শিক্ষকবৃন্দ</a></li>
             <li><a href="authority.html">কর্তৃপক্ষ</a></li>
-            <li><a href="index.html#facilities">সুবিধা</a></li>
-            <li><a href="index.html#results">একাডেমিক রেজাল্ট</a></li>
-            <li><a href="admission.html" class="admission-btn">এডমিশন</a></li>
-            <li><a href="index.html#contact">যোগাযোগ</a></li>
             
+            <!-- ডেস্কটপের জন্য ড্রপডাউন মেনু -->
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropdown-toggle">আরো </a>
+                <div class="dropdown-menu">
+                    <a href="index.html#facilities">সুবিধাসমূহ</a>
+                    <a href="index.html#results">একাডেমিক রেজাল্ট</a>
+                    <a href="index.html#events">ইভেন্টস</a>
+                    <a href="index.html#gallery">গ্যালারি</a>
+                    <a href="index.html#notice">নোটিশ</a>
+                    <a href="index.html#contact">যোগাযোগ</a>
+                </div>
+            </li>
+            
+            <!-- মোবাইলের জন্য আলাদা লিংক (ডেস্কটপে হাইড) -->
+            <li class="mobile-only"><a href="index.html#facilities">সুবিধাসমূহ</a></li>
+            <li class="mobile-only"><a href="index.html#results">একাডেমিক রেজাল্ট</a></li>
+            <li class="mobile-only"><a href="index.html#events">ইভেন্টস</a></li>
+            <li class="mobile-only"><a href="index.html#gallery">গ্যালারি</a></li>
+            <li class="mobile-only"><a href="index.html#notice">নোটিশ</a></li>
+            <li class="mobile-only"><a href="index.html#contact">যোগাযোগ</a></li>
+            
+            <li><a href="admission.html" class="admission-btn">এডমিশন</a></li>
         </ul>
         <div class="hamburger">
             <div class="bar"></div>
